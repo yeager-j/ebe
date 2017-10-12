@@ -1,0 +1,25 @@
+<div class="wrapper">
+  <div class="page-header page-header-small">
+    <div class="page-header-image" data-parallax="true" style="background-image: url(https://res.cloudinary.com/display97/image/upload/q_auto,fl_lossy,f_auto/63402.jpg) ;">
+    </div>
+    <div class="content-center">
+      <h3 class="title" *ngIf="user?.rank === 0"><span class="badge badge-danger">Admin</span></h3>
+      <div class="photo-container">
+        <img src="../assets/img/mike.jpg" alt="">
+      </div>
+      <h3 class="title">{{ user?.name }} | {{ user?.type }}</h3>
+      <p class="lead">{{ user?.email }}</p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="container">
+      <div class="button-container">
+        <a [routerLink]="['edit']" class="btn btn-primary btn-round btn-lg" *ngIf="currentUser?.rank < 2">Edit User</a>
+        <a [routerLink]="['analytics']" class="btn btn-info btn-round btn-lg" *ngIf="currentUser?.rank < 2">Analytics</a>
+      </div>
+
+      <app-training-blocks [user]="user"></app-training-blocks>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

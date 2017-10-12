@@ -1,0 +1,15 @@
+.row.bordered {
+  div:not(:last-child) {
+    // border-right: 1px solid rgba(0, 0, 0, .3);
+  }
+
+  div {
+    h3 {
+      text-align: center;
+    }
+  }
+}
+
+.nav-pills .nav-item:not(:last-child) .nav-link {
+  margin-right: 0;
+}

@@ -1,0 +1,51 @@
+<div class="page-header" filter-color="orange">
+  <div class="page-header-image" style="background-image:url(../assets/img/login.jpg)"></div>
+  <div class="content-center">
+    <div class="container">
+      <div class="col-md-4 content-center">
+        <div class="alert alert-danger text-left" role="alert" *ngIf="errors">
+          <div class="container">
+            <div class="alert-icon">
+              <i class="now-ui-icons objects_support-17"></i>
+            </div>
+            <strong>Oh snap!</strong> Change a few things up and try submitting again.
+
+            <ul>
+              <li *ngFor="let error of errors">{{ error | capitalize }}</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card card-login card-plain">
+          <form class="form" (ngSubmit)="login()">
+            <div class="header header-primary text-center">
+              <h2>Login</h2>
+            </div>
+            <div class="card-content">
+              <div class="input-group form-group-no-border input-lg">
+                <span class="input-group-addon">
+                  <i class="now-ui-icons users_circle-08"></i>
+                </span>
+                <input type="email" [(ngModel)]="email" name="email" class="form-control" placeholder="Email...">
+              </div>
+              <div class="input-group form-group-no-border input-lg">
+                <span class="input-group-addon">
+                  <i class="now-ui-icons text_caps-small"></i>
+                </span>
+                <input type="password" [(ngModel)]="password" name="password" placeholder="Password..." class="form-control" />
+              </div>
+            </div>
+            <div class="footer text-center">
+              <button type="submit" class="btn btn-primary btn-round btn-lg btn-block">Login</button>
+            </div>
+            <div class="pull-right">
+              <h6>
+                <a href="#pablo" class="link footer-link">Need Help?</a>
+              </h6>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

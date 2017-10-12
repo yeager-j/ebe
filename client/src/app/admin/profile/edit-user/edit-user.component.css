@@ -1,0 +1,7 @@
+.page-header {
+  min-height: 100vh;
+}
+
+.page-header .container label, h5 {
+  color: #2c2c2c;
+}
